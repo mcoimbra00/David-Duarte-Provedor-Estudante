@@ -1,0 +1,764 @@
+@charset "utf-8";
+
+html, body { 
+    margin: 0; 
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+@font-face {
+    font-family: Helvetica;
+    src: url('../fonts/HelveticaNeue.ttf');
+}
+
+.row:before
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*LAPTOP*/
+@media screen and (min-width: 991px) {   
+body {
+    width: 100%;
+    overflow-x: hidden;
+ }
+    
+.col_1 {width: 8.33%;}
+.col_2 {width: 16.66%;}
+.col_3 {width: 25%;}
+.col_4 {width: 33.33%;}
+.col_5 {width: 41.66%;}
+.col_6 {width: 50%;}
+.col_7 {width: 58.33%;}
+.col_8 {width: 66.66%;}
+.col_9 {width: 75%;}
+.col_10 {width: 83.33%;}
+.col_11 {width: 91.66%;}
+.col_12 {width: 100%;}
+    
+[class*="col_"]:first-child {margin-left: 0;}
+[class*="col_"]:last-child {margin-right: 0;}
+[class*="col_"] {float:left;}
+/*Transversal a todas as Paginas (LAPTOP)*/
+/*LOGO LAPTOP*/
+.logo {
+    height: 10vw;
+    width: auto;
+    background-color: dodgerblue;
+    margin-left: 37%;
+}
+    
+.menu {
+    background-color: dodgerblue;
+}
+/*MENU LAPTOP*/
+ul {
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    background-color: dodgerblue;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+li {
+    display: inline-block;
+    margin: 3vw;
+}
+
+li a {
+    display: block;
+    min-width: 150px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    color: #fff;
+    text-decoration: none;
+}
+
+li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 50px;
+    line-height: 40px;
+}
+
+li:hover a {
+    color: #000000;
+}
+
+li ul {
+    display: none;
+}
+
+li ul li {
+    display: block;
+    float: none;
+}
+
+li ul li a {
+    width: auto;
+    min-width: 150px;
+    padding: 0 20px;
+}
+
+ul li a:hover + .hidden, .hidden:hover {
+    display: block;
+}
+
+.open-menu {
+    display: none;
+    text-align: center;
+}
+    
+input[type=checkbox] {
+    display: none;
+}
+    
+input[type=checkbox]:checked ~ #menu {
+    display: block;
+}
+
+@media screen and (max-width:760px) {
+ul {
+    position: static;
+    display: none;
+}
+    
+ul li, li a {
+    width: 100%;
+}
+    
+.open-menu {
+    display: block;
+}   
+}
+
+    
+/*Pagina Home (LAPTOP)*/
+/*SlideShow LAPTOP*/
+.containerslide {
+    margin-top: 2vw;
+    height: 33vw;
+    text-align: center;
+    margin-bottom: 0;
+}    
+    
+#slideshow > div {
+    position: absolute;
+}
+    
+.imgslide {
+    width: 50%; 
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+}
+    
+/*CONTEUDO LAPTOP*/
+.titles {
+    margin: 0;
+    font-family: Helvetica;
+    font-size: 2vw;
+    font-weight: bold;
+    position:relative;
+}
+    
+.presentation {
+    font-family: Helvetica;
+    font-size: 1vw;
+    position:relative;
+    margin: 0;
+    margin-top: 1%;
+}
+    
+.slogan_1 {
+    position: absolute;
+    margin-top: 65vw;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0%;
+    padding: 0;
+}
+    
+.slogan {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+    
+/*PAGINA SOBRE MIMN (LAPTOP)*/
+  /*PARTE DO TEXTO*/ 
+.esquerda {
+    width: 48%;
+    margin-left: 2%;
+}
+    
+.title {
+    font-family: Helvetica;
+    font-size: 2vw;
+    font-weight:700;
+    margin-left: 4%;
+}
+    
+.sobre_mim {
+    font-family: Helvetica;
+    font-size: 1.5vw;
+    margin-left: 3%;
+    }
+    
+.direita {
+    width: 50%;
+    align-content: center;
+}
+    
+.img_sobre_mim {
+    width: 100%;
+    padding-left:15%;
+    margin-right: 60%;
+    margin-top: 2%;
+    border-radius: 1vw;
+}
+    
+/*PAGINA CAMPANHA (Laptop)*/
+.objetivos{
+    background-color: white; 
+}
+
+/*PAGINA CONTATOS (LAPTOP)*/
+ .forms {
+    text-align: center;
+}
+    
+input[type=text], select, textarea {
+    width: 50vw;
+    padding: 2vw;  
+    border: 0.1vw solid #ccc; 
+    border-radius: 0.5vw; 
+    box-sizing: border-box;
+    margin-top: 3vw;
+    font-size: 1vw;
+}
+    
+input[type=submit] {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 2vw 5vw;
+    margin-top: 1vw;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    font-size: 1vw;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(0, 0, 0);
+}
+}
+
+/*TABLET*/
+@media screen and (min-width: 480px) and (max-width: 990px) {
+    
+.colt_1 {width: calc(11.1%);}
+.colt_2 {width: calc(23.8%);}
+.colt_3 {width: calc(36.5%);}
+.colt_4 {width: calc(49.2%);}
+.colt_5 {width: calc(61.9%);}
+.colt_6 {width: calc(74.6%);}
+.colt_7 {width: calc(87.3%);}
+.colt_8 {width: calc(100%);}
+
+[class*="colt_"]:first-child {margin-left: 0;}
+[class*="colt_"]:last-child {margin-right: 0;}
+[class*="colt_"] {float:left;}
+    
+/*TRANSVERSAL A TODAS AS PAGINAS (TABLET)*/
+/*LOGO TABLET*/
+.logo {
+    height: 10vw;
+    width: auto;
+    background-color: dodgerblue;
+    margin-left: 37%;
+}
+    
+.menu {   
+    background-color: dodgerblue;
+}
+    
+/*Menu TABLET*/
+ul {
+    width: 100%;
+    font-size: 2.5vw;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    background: dodgerblue; 
+}
+
+li {
+    display: inline-block;
+    margin: 2vw;
+}
+
+li a {
+    display: block;
+    min-width: 150px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    color: #fff;
+    text-decoration: none;
+}
+
+li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 50px;
+    line-height: 40px;
+}
+
+li:hover a {
+    color: #000000;
+}
+
+li ul {
+    display: none;
+}
+
+li ul li {
+    display: block;
+    float: none;
+}
+
+li ul li a {
+    width: auto;
+    min-width: 150px;
+    padding: 0 20px;
+}
+
+ul li a:hover + .hidden, .hidden:hover {
+    display: block;
+}
+
+.open-menu {
+    display: none;
+    text-align: center;
+}
+    
+input[type=checkbox] {
+    display: none;
+}
+    
+input[type=checkbox]:checked ~ #menu {
+    display: block;
+}
+
+@media screen and (max-width:760px) {
+
+ul {
+    position: static;
+    display: none;
+}
+    
+ul li, li a {
+    width: 100%;
+}
+    
+.open-menu {
+    display: block;
+}  
+}
+
+/*PAGINA HOME TABLET*/
+
+/*SlideShow TABELT*/   
+.containerslide {
+    margin-top: 1vw;
+    height: 33vw;
+    text-align: center;  
+}
+
+#slideshow > div {
+    position: absolute;
+}
+    
+.imgslide {
+    width: 50%; 
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+}
+
+    
+/*ConteudoTABLET*/
+.titles {
+    margin: 0%;
+    padding: 0%;
+    font-family: Helvetica;
+    font-size: 2vw;
+    font-weight: bold;
+    position:relative;
+}
+
+.presentation{
+    font-family: Helvetica;
+    font-size: 2vw;
+    padding: 0%;
+    margin: 0%;
+}
+    
+.slogan_1 {
+    position:absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+    
+.slogan {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+    
+/*PAGINA SOBRE MIMN TABLET*/
+  /*PARTE DO TEXTO*/ 
+.esquerda {
+    width: 100%;
+    margin-left: 2%;
+}
+    
+.title {
+    font-family: Helvetica;
+    font-size: 2vw;
+    font-weight:700;
+    margin-left: 4%;
+}
+    
+.sobre_mim {
+    font-family: Helvetica;
+    font-size: 1.5vw;
+    margin-left: 3%;
+}
+    
+.direita {
+    width: 100%;
+    align-content: center;
+}
+
+.img_sobre_mim {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 2%;
+    border: 0;
+    border-radius: 1vw;
+}
+    
+.slogan2 {
+    width: 100%;
+    height: auto;
+}
+
+.sloganback {
+    width: 100%;
+    height: auto;
+}
+
+/* PAGINA CAMPANHA*/
+.objetivos{
+   background-color: white; 
+}
+
+/* CONTACTO   */
+.forms {
+    text-align: center;
+}
+    
+input[type=text], select, textarea {
+    width: 50vw;
+    padding: 2vw;  
+    border: 0.1vw solid #ccc; 
+    border-radius: 0.5vw; 
+    box-sizing: border-box;
+    margin-top: 3vw;
+    font-size: 1vw;
+}
+    
+input[type=submit] {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 2vw 5vw;
+    margin-top: 1vw;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    font-size:1vw;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(0, 0, 0);
+}
+}
+
+/*MOBILE*/
+@media screen and (max-width: 480px) {
+   
+.colm_1 {width: calc(18.72%);}
+.colm_2 {width: calc(39.04%);}
+.colm_3 {width: calc(59.36%);}
+.colm_4 {width: calc(79.68%);}
+.colm_5 {width: calc(100%);}
+    
+[class*="colm_"]:first-child {margin-left: 0;}
+[class*="colm_"]:last-child {margin-right: 0;}
+    
+[class*="colm_"] {float:left;}
+/*TRANSVERSAL MOBILE*/
+/*LOGO MOBILE*/  
+    
+.logo {
+   display:none;
+}
+    
+.menu {
+    background-color: dodgerblue;
+    }
+/*Fim LOGO MOBILE*/    
+/*Menu Mobile */
+ul {
+    width: 100%;
+    font-size: 3vw;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    background-color:dodgerblue;
+    font-size: 5vw;
+}
+
+li {
+    display: inline-block;
+    margin: 2vw;
+}
+
+li a {
+    display: block;
+    min-width: 150px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    color: white; 
+    text-decoration: none;
+}
+
+li:hover ul a {
+    background: dodgerblue;
+    color: white;
+    height: 50px;
+    line-height: 40px;
+}
+
+li:hover a {
+    color: #000000;
+}
+
+/* Apenas desktop*/
+li ul {
+    display: none;
+}
+
+li ul li {
+    display: block;
+    float: none;
+}
+
+li ul li a {
+    width: auto;
+    min-width: 150px;
+    padding: 0 20px;
+}
+
+ul li a:hover + .hidden, .hidden:hover {
+    display: block;
+}
+
+ .open-menu {
+    display: none;
+    text-align: center;
+    }
+    
+input[type=checkbox] {
+    display: none;
+    }
+    
+input[type=checkbox]:checked ~ #menu {
+    display: block;
+    }
+
+@media screen and (max-width:760px) {
+
+ul {
+    position: static;
+    display: none;      
+    }
+    
+
+ul li, li a {
+    width: 100%;
+    }
+    
+.open-menu {
+    display: block;
+    }
+
+.menu img {
+    width: 10%;
+    }
+    
+.media {
+        display: none;
+    }         
+}
+
+/*PAGINA HOME*/
+
+/*SLIDESHOW MOBILE*/
+.containerslide {
+    margin-top: 1vw;
+    height: 60vw;
+    text-align: center;
+}
+
+#slideshow > div {
+    position: absolute;
+    z-index: -1;
+}
+    
+.imgslide {
+    width: 90%; 
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw; 
+}    
+/*SLIDESHOW MOBILE FIM*/
+
+/*CONTEUDO MOBILE*/
+    .titles {
+    margin-top: 1vw;
+    margin: 0%;
+    padding: 0%;
+    font-family: Helvetica;
+    font-size: 5vw;
+    font-weight: bold;
+    position:relative;
+}
+
+.presentation{
+    font-family: Helvetica;
+    font-size: 4vw;
+    padding: 0%;
+    margin: 0%;
+}
+
+.slogan_1 {
+    position:absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.slogan {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/*PARTE DO TEXTO*/ 
+.esquerda {
+    width: 100%;
+    margin-left: 2%;
+}
+
+.title {
+    font-family: Helvetica;
+    font-size: 5vw;
+    font-weight:700;
+    margin-left: 4%;
+}
+
+.sobre_mim {
+    font-family: Helvetica;
+    font-size: 4.5vw;
+    margin-left: 3%;
+}
+
+.direita {
+    width: 100%;
+    align-content: center;
+}
+
+.img_sobre_mim {
+    width: 66%;
+    margin-left: 17%;
+    margin-right: 17%;
+    margin-top: 2%;
+    border: 0;
+    border-radius: 1vw;
+}
+
+.slogan2 {
+    width: 100%;
+    height: auto;
+}
+.sloganback {
+    width: 100%;
+    height: auto;
+}
+
+/*PAGINA CAMPANHA*/
+ .objetivos{
+     display: block;
+   background-color: white; 
+}
+
+/* FORMULARIO   */
+.forms {
+    text-align: center;
+}
+    
+input[type=text], select, textarea {
+    width: 50vw;
+    padding: 3vw;  
+    border: 0.1vw solid #ccc; 
+    border-radius: 0.5vw; 
+    box-sizing: border-box;
+    margin-top: 3vw;
+    font-size: 2vw;
+}
+    
+input[type=submit] {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 2vw 5vw;
+    margin-top: 1vw;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    font-size:2vw;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(0, 0, 0);
+}
+}
+/*FIM*/
